@@ -1,0 +1,419 @@
+<body
+  style="background-image: linear-gradient(#436f8d,#6d5f9c); background-size: cover; background-position: center;">
+</body>
+<%- include('../partials/header') %>
+  <!-- < %- include('../partials/adminNavbar') %> -->
+   <!-- top navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark" style="box-shadow: 0px 5px 8px 2px rgba(72, 63, 94, 0.247); background-color: rgb(53, 48, 78)">
+    <div class="container-fluid">
+      <img style="margin-left: 5px; height: 50px; width: 100px; display: inline-block;" src="https://e7.pngegg.com/pngimages/1011/581/png-clipart-w-hotel-logo-illustration-w-hotels-w-barcelona-starwood-marriott-international-hotel-logo-angle-text.png">
+      <a class="navbar-brand" href="/hotelIndex"><span style=" margin-left: 15px; color: white;">Hotels</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+
+        </ul>
+
+        <img style="height:50px; width: 50px; margin-left: -10px;"
+          src="https://fc01.deviantart.net/fs71/f/2012/029/f/1/user_icom_by_adeptusmagos-d4o017u.png">
+      </div>
+    </div>
+  </nav>
+  <!-- top navbar end -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-11 mx-auto">
+        <div class="row">
+          <!-- right side navbar -->
+
+          <div class="col-lg-2 col-md-4 d-md-block">
+            <div class="card border-0 bg-common card-left" style="height: 90vh; border-radius: 0; margin-left: -14px;">
+              <div class="card-body">
+                <nav class="nav d-md-block d-none">
+                  <a class="nav-link" href="#"><img style="height: 80px; width: 80px; margin-left: -10px;"
+                      src="https://fc01.deviantart.net/fs71/f/2012/029/f/1/user_icom_by_adeptusmagos-d4o017u.png">
+                      <span style="color: rgb(71, 67, 92); font-size: 15px;">Admin<span</a>
+                  <hr style="margin-top: -5px;">
+                  <a data-toggle="tab" class="nav-link active" aria-current="page" href="#viewHotel"> <i
+                      class="fa-solid fa-hotel" style="color: rgb(71, 67, 92);"></i> &nbsp;
+                    <span style="color: rgb(71, 67, 92); font-size: 15px;">Hotels</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#addHotel"> <i class="fa-solid fa-square-h" style="color: rgb(71, 67, 92); font-size: 15px;"></i> &nbsp;
+                    <span style="color: rgb(71, 67, 92); font-size: 15px;">Add Hotels</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#bookings"> <i class="fa-solid fa-bookmark" style="color: rgb(71, 67, 92); font-size: 15px;"></i> &nbsp;
+                    <span style="color: rgb(71, 67, 92); font-size: 15px;">Bookings</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#transactions"> <i class="fa-solid fa-money-bill" style="color: rgb(71, 67, 92); font-size: 15px;"></i>
+                    &nbsp; <span style="color: rgb(71, 67, 92); font-size: 15px;">Transactions</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#users"> <i class="fa-solid fa-user" style="color: rgb(71, 67, 92); font-size: 15px;"></i> &nbsp; <span style="color: rgb(71, 67, 92); font-size: 15px;">Users</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#admins"> <i class="fa-solid fa-lock" style="color: rgb(71, 67, 92); font-size: 15px;" ></i> &nbsp;
+                    <span style="color: rgb(71, 67, 92); font-size: 15px;">Admins</span></a>
+                  <a data-toggle="tab" class="nav-link" href="#addRoomType"> <i class="fa-solid fa-circle-plus" style="color: rgb(71, 67, 92); font-size: 15px;"></i>
+                    &nbsp; <span style="color: rgb(71, 67, 92); font-size: 15px;">Add Room Type</span></a>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- right side div start -->
+          <div class="col-lg-10 col-md-9">
+            <div class="card mt-3">
+              <div class="card-header border-bottom mb-3 d-md-none">
+                <ul class="nav nav-tabs card-header nav-fill">
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link active" aria-current="page" href="#viewHotel"><i
+                        class="fa-solid fa-hotel"></i> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#addHotel"><i class="fa-solid fa-square-h"></i> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#bookings"><i class="fa-solid fa-bookmark"></i> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#transactions"><i
+                        class="fa-solid fa-money-bill"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#users"><i class="fa-solid fa-user"></i> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#admins"><i class="fa-solid fa-lock"></i> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#addRoomType"><i class="fa-solid fa-circle-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!--Actual data which is live start -->
+              <div class="card-body tab-content border-0 shadow" style="background: none;">
+                <!-- actual view hotel data -->
+                <div class="tab-pane active" id="viewHotel">
+                  <!-- <h2 style="color: white;">This is view hotel page</h2> -->
+                  <div class="container">
+                    <div class="row">
+                     
+                      <!-- <hr style="box-shadow:1px 5px 8px 5px rgba(56, 215, 236, 0.5) !important;"> -->
+                      <% for(let myHotel of mHotel){ %>
+                        <div class="col-lg-3 mt-3 mb-3 d-flex justify-content-center">
+                          <div class="card shadow" style="width: 18rem;">
+                            <a href="/admin/<%= myHotel.hotelId %>" style="display: block; overflow: hidden;"><img src="<%= myHotel.Image[0] %>" class="card-img-top" alt="..."
+                              style="height: 200px; object-fit: cover; transition: transform 0.3s ease; transform: scale(1);"
+                              onmouseover="this.style.transform='scale(1.1)'"
+                              onmouseout="this.style.transform='scale(1)';"></a>
+                            <div class="card-body">
+                              <h5 class="card-title">
+                                <%= myHotel.name %>
+                              </h5>
+                              <p class="card-text">
+                                <%= myHotel.address.fullAddress %>
+                              </p>
+                              <a href="#" class="btn" style="background-color: #6d5f9c; color: white;">View Hotel</a>
+                            </div>
+                          </div>
+                        </div>
+                        <% } %>
+                    </div>
+                  </div>
+                </div>
+                <!-- actual Add hotel data -->
+                <div class="tab-pane" id="addHotel">
+                  <h4 class="d-flex justify-content-center" style="color: #20124e;">Add hotels</h4>
+                  <div class="container mt-3">
+                    <div class="row">
+                      <div class="col-lg-6 m-auto">
+                        <form action="/addHotels" method="post"
+                          style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
+                          <div class="form-group">
+                            <label for="name" class="form-label">Hotel Name</label>
+                            <input type="text" class="form-control" id="name" name="hotel[name]"
+                              style="border-radius: 5px;">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="hotel[address.fullAddress]"
+                              style="border-radius: 5px;">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="stateDropdown" class="form-label">State</label>
+                            <select id="stateDropdown" name="hotel[address.state]" onchange="populateCityDropdown()"
+                              style="width: 100%; height: 39px; border-color: lightgray; border-radius: 5px;">
+                              <option value="">Select a state</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="cityDropdown" class="form-label">City</label>
+                            <select id="cityDropdown" name="hotel[address.city]"
+                              style="width: 100%; height: 39px; border-color: lightgray; border-radius: 5px;">
+                              <option value="">Select a city</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="text" class="form-control" id="image" name="hotel[Image]"
+                              style="border-radius: 5px;">
+                          </div>
+
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="description"
+                              name="hotel[description]" style="border-radius: 5px;"></textarea>
+                            <label for="description">Description</label>
+                          </div>
+
+                          <button type="submit" class="mt-3 btn"
+                            style="width: 100%; border-radius: 5px; font-weight: bold; background-color: #6d5f9c; color: white;" >Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- actual Bookings hotel data -->
+                <div class="tab-pane" id="bookings">
+                  <h2>This is Booking hotel page</h2>
+                </div>
+                <!-- actual Transactions hotel data -->
+                <div class="tab-pane" id="transactions">
+                  <h2>This is Transactions page</h2>
+                </div>
+                <!-- actual Users hotel data -->
+                <div class="tab-pane" id="users">
+                  <h2>This is Users page</h2>
+                </div>
+                <!-- actual Admins hotel data -->
+                <div class="tab-pane" id="admins">
+                  <h2>This is Admin page</h2>
+                </div>
+                <!-- actual Rooms hotel data -->
+                <div class="tab-pane" id="addRoomType">
+                  <h4 class="d-flex justify-content-center" style="color: #20124e;">Add Rooms</h4>
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center">
+                          <form action="/addRooms" method="post" style="background-color: #f8f9fa; border: 1px solid #ced4da; border-radius: 10px; padding: 20px;">
+                            <div class="mb-3">
+                                <label for="roomType" class="form-label">Room Type</label>
+                                <input type="text" class="form-control" id="roomType" name="room[roomType]">
+                            </div>
+                            <div class="mb-3">
+                                <label for="roomName" class="form-label">Room Name</label>
+                                <input type="text" class="form-control" id="roomName" name="room[roomName]">
+                            </div>
+                            <div class="mb-3">
+                                <label for="roomId" class="form-label">Room Id</label>
+                                <input type="text" class="form-control" id="roomId" name="room[roomId]">
+                            </div>
+                            <div class="dropdown mb-3">
+                                <label for="personCount"><strong>Person Count:</strong></label><br>
+                                <select class="form-select" id="personCount" name="room[personCount]" style="background-color: #6d5f9c; color: white;">
+                                    <option selected disabled>Choose...</option>
+                                    <!-- Generating dropdown options using JavaScript array -->
+                                    <script>
+                                        // JavaScript array containing values from 1 to 5
+                                        const counts = [1, 2, 3, 4, 5];
+                                        // Looping through the array to generate options
+                                        counts.forEach(count => {
+                                            document.write(`<option value="${count}">${count}</option>`);
+                                        });
+                                    </script>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn" style="background-color: #6d5f9c; color: white;">Submit</button>
+                        </form>
+                        
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function selectCount(count) {
+        document.getElementById('dropdownButton').innerHTML = count;
+        document.querySelector('input[name="room[personCount]"]').value = count
+    }
+</script>
+
+  <script>
+    // Provided data
+    const data = [
+      {
+        "name": "Andhra Pradesh",
+        "cities": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Kurnool", "Kakinada", "Rajahmundry"]
+      },
+      {
+        "name": "Arunachal Pradesh",
+        "cities": ["Itanagar", "Naharlagun", "Pasighat", "Namsai", "Bomdila", "Ziro"]
+      },
+      {
+        "name": "Assam",
+        "cities": ["Guwahati", "Silchar", "Dibrugarh", "Jorhat", "Nagaon", "Tezpur", "Tinsukia"]
+      },
+      {
+        "name": "Bihar",
+        "cities": ["Patna", "Gaya", "Bhagalpur", "Muzaffarpur", "Purnia", "Darbhanga", "Bihar Sharif"]
+      },
+      {
+        "name": "Chhattisgarh",
+        "cities": ["Raipur", "Bhilai", "Bilaspur", "Korba", "Rajnandgaon", "Durg", "Raigarh"]
+      },
+      {
+        "name": "Goa",
+        "cities": ["Panaji", "Vasco da Gama", "Margao", "Mapusa", "Ponda", "Bicholim"]
+      },
+      {
+        "name": "Gujarat",
+        "cities": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar", "Jamnagar", "Junagadh"]
+      },
+      {
+        "name": "Haryana",
+        "cities": ["Faridabad", "Gurgaon", "Panipat", "Ambala", "Rohtak", "Hisar", "Karnal"]
+      },
+      {
+        "name": "Himachal Pradesh",
+        "cities": ["Shimla", "Mandi", "Solan", "Dharamshala", "Palampur", "Una", "Nahan"]
+      },
+      {
+        "name": "Jammu and Kashmir",
+        "cities": ["Srinagar", "Jammu", "Anantnag", "Baramulla", "Kathua", "Samba", "Pulwama"]
+      },
+      {
+        "name": "Jharkhand",
+        "cities": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar", "Hazaribagh", "Giridih"]
+      },
+      {
+        "name": "Karnataka",
+        "cities": ["Bangalore", "Mysore", "Hubli", "Mangalore", "Belgaum", "Davanagere", "Gulbarga"]
+      },
+      {
+        "name": "Kerala",
+        "cities": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur", "Alappuzha", "Kollam", "Palakkad"]
+      },
+      {
+        "name": "Madhya Pradesh",
+        "cities": ["Bhopal", "Indore", "Jabalpur", "Gwalior", "Ujjain", "Sagar", "Dewas"]
+      },
+      {
+        "name": "Maharashtra",
+        "cities": ["Mumbai", "Pune", "Nagpur", "Nashik", "Aurangabad", "Thane", "Solapur"]
+      },
+      {
+        "name": "Manipur",
+        "cities": ["Imphal", "Thoubal", "Bishnupur", "Churachandpur", "Kakching", "Ukhrul", "Jiribam"]
+      },
+      {
+        "name": "Meghalaya",
+        "cities": ["Shillong", "Tura", "Jowai", "Nongpoh", "Williamnagar", "Baghmara", "Nongstoin"]
+      },
+      {
+        "name": "Mizoram",
+        "cities": ["Aizawl", "Lunglei", "Saiha", "Champhai", "Kolasib", "Serchhip", "Lawngtlai"]
+      },
+      {
+        "name": "Nagaland",
+        "cities": ["Dimapur", "Kohima", "Mokokchung", "Tuensang", "Wokha", "Zunheboto", "Phek"]
+      },
+      {
+        "name": "Odisha",
+        "cities": ["Bhubaneswar", "Cuttack", "Rourkela", "Brahmapur", "Sambalpur", "Puri", "Balasore"]
+      },
+      {
+        "name": "Punjab",
+        "cities": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala", "Bathinda", "Mohali", "Pathankot"]
+      },
+      {
+        "name": "Rajasthan",
+        "cities": ["Jaipur", "Jodhpur", "Udaipur", "Kota", "Bikaner", "Ajmer", "Bhilwara"]
+      },
+      {
+        "name": "Sikkim",
+        "cities": ["Gangtok", "Namchi", "Gyalshing", "Mangan", "Singtam", "Rangpo"]
+      },
+      {
+        "name": "Tamil Nadu",
+        "cities": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tiruppur", "Erode"]
+      },
+      {
+        "name": "Telangana",
+        "cities": ["Hyderabad", "Warangal", "Nizamabad", "Karimnagar", "Khammam", "Ramagundam", "Mahbubnagar"]
+      },
+      {
+        "name": "Tripura",
+        "cities": ["Agartala", "Udaipur", "Dharmanagar", "Kailasahar", "Belonia", "Sabroom", "Khowai"]
+      },
+      {
+        "name": "Uttar Pradesh",
+        "cities": ["Lucknow", "Kanpur", "Agra", "Varanasi", "Allahabad", "Meerut", "Ghaziabad"]
+      },
+      {
+        "name": "Uttarakhand",
+        "cities": ["Dehradun", "Haridwar", "Roorkee", "Haldwani", "Rudrapur", "Kashipur", "Rishikesh"]
+      },
+      {
+        "name": "West Bengal",
+        "cities": ["Kolkata", "Howrah", "Durgapur", "Asansol", "Siliguri", "Bardhaman", "Malda"]
+      }
+    ];
+
+
+    // Get the dropdown elements
+    const stateDropdown = document.getElementById('stateDropdown');
+    const cityDropdown = document.getElementById('cityDropdown');
+
+    // Populate the state dropdown
+    for (const item of data) {
+      const option = document.createElement('option');
+      option.text = item.name;
+      stateDropdown.add(option);
+     
+    }
+
+    // Function to populate city dropdown based on selected state
+    function populateCityDropdown() {
+      // Clear previous options
+      cityDropdown.innerHTML = '<option value="">Select a city</option>';
+
+      // Get selected state
+      const selectedState = stateDropdown.value;
+
+      // Find the cities of selected state
+      let selectedCities = [];
+      for (const item of data) {
+        if (item.name === selectedState) {
+          selectedCities = item.cities;
+          break;
+        }
+      }
+
+      // Populate the city dropdown with cities of selected state
+      for (const city of selectedCities) {
+        const option = document.createElement('option');
+        option.text = city;
+        cityDropdown.add(option);
+      }
+    }
+
+    // Set text to header
+    // const headerText = document.getElementById('header');
+    // headerText.innerText = "Anand Murti";
+  </script>
+  <%- include('../partials/footer') %>
+    </body>
